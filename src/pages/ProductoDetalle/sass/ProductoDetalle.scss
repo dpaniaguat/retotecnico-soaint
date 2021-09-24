@@ -1,0 +1,103 @@
+.main-saleform {
+    width: 85vw;
+}
+
+
+.breadcrumb {
+    display     : flex;
+    flex-flow   : row wrap;
+    grid-gap    : 0.4rem;
+    gap         : 0.4rem;
+    padding     : 1.5rem;
+    background  : white;
+    width       : 100%;
+    border      : 1px solid #ccc;
+    padding-left: 9rem;
+
+    span {
+        color: rgb(104, 104, 104)
+    }
+}
+
+.saleform {
+    display                    : grid;
+    gap                        : 2rem;
+    // grid-auto-rows          : 40rem;
+    /* grid-template-columns   : repeat(auto-fill,minmax(15rem,1fr)); */
+    grid-template-columns      : repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    padding                    : 35px;
+
+    &-galeria {
+        border          : 1px solid #ccc;
+        border-radius   : 12px;
+        padding         : 22px;
+        background-color: white;
+
+        img {
+            width: 100%
+        }
+    }
+
+    &-info {
+        display  : flex;
+        flex-flow: column wrap;
+
+        padding: 1.5rem;
+
+        &__titulo {
+            margin-top   : 0.1rem;
+            margin-bottom: 2rem;
+            font-size    : 2rem;
+            border-bottom: 1px solid #ccc;
+
+        }
+
+        &__description {
+            width       : 100%;
+            text-align  : justify;
+            text-justify: inter-word;
+        }
+
+        &__category {
+            margin-top: 1.5rem;
+            color     : rgb(83, 82, 82);
+        }
+
+        &__price {
+            margin-top: 1.5rem;
+
+            span {
+                color    : rgba(3, 24, 41, 0.912);
+                font-size: 1.6rem;
+            }
+        }
+
+        &__addToCart {
+            margin-top      : 2rem;
+            width           : 100%;
+            color           : white;
+            background-color: #005e85;
+            height          : 2.8rem;
+            border-radius   : 15px;
+            border-color    : transparent;
+            text-transform  : uppercase;
+            cursor          : pointer;
+        }
+
+
+
+    }
+
+    @media(min-width:600px) {
+        &-info {
+            border-top: 1px solid #ccc;
+        }
+    }
+
+    @media(min-width:900px) {
+        &-info {
+            // border-left: 1px solid #ccc;
+            border-top: 0px solid #ccc;
+        }
+    }
+}
