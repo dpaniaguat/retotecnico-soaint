@@ -36,10 +36,12 @@ export const UserSession = () => {
         className="user_session__cart"
         onClick={() => setViewSumary(!viewSumary)}
       >
-        <IconCart />
+        <div className="user_session__cart_icons">
+          <IconCart />
           <span className={`${countItemsCart > 0 ? "show" : ""}`}>
             {countItemsCart}
           </span>
+        </div>
       </div>
       <div className={`user_session--cartsumary ${!viewSumary ? "hide" : ""}`}>
         {<CarritoItems renderCart={countItemsCart} />}

@@ -4,6 +4,7 @@ import Loading from "../../components/common/Loading";
 import CartContext from "../../context/cart/CartContext";
 import { useFetchProducts } from "../../hooks/useFetchProducts";
 import { agregarProducto } from "../../utils/appCart";
+import { IconCart } from "../../assets/icons";
 import "./sass/ProductoDetalle.scss";
 
 const ProductoDetalle = ({ history }) => {
@@ -13,8 +14,6 @@ const ProductoDetalle = ({ history }) => {
 
   //const {  producto } = useMemo(() => useFetchProducts( productoId ), [ productoId ]);
   const { data: producto, loading } = useFetchProducts(productoId);
-
-  console.log("saleform-producto:", producto);
 
   const handleAddToCart = (id, title, price, image) => {
     const producto = {
@@ -94,7 +93,8 @@ const ProductoDetalle = ({ history }) => {
                   className="saleform-info__addToCart"
                   onClick={() => handleAddToCart(id, title, price, image)}
                 >
-                  Añadir al carrito
+                  {<IconCart/>}
+                   Añadir al carrito
                 </button>
                
               </div>
