@@ -1,0 +1,36 @@
+.navbar {
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+
+    &__menu {
+        display           : flex;
+        // flex-flow      : row wrap;
+        // padding        : 5px;
+        // justify-content: space-between;
+
+        li {
+            list-style     : none;
+            margin         : 0;
+            display        : flex;
+            flex-flow      : column wrap;
+            justify-content: center;
+            align-items    : center;
+
+            &>span {
+                border    : 1px solid red;
+                width     : 40%;
+                margin-top: -5px;
+            }
+        }
+
+        a {
+            text-decoration    : none;
+            font-size          : 13px;
+            padding            : 10px;
+            color              : rgb(136, 135, 135);
+            border-bottom-width: medium;
+
+        }
+    }
+}
