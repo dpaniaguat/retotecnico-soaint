@@ -1,0 +1,43 @@
+.sidebar-content {
+    display              : grid;
+    gap                  : 0.3rem;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content      : space-between;
+    padding-left         : 10px;
+
+    h3 {
+        margin-right: 10px;
+    }
+}
+
+.siderbar-content--button{
+    button {
+        height          : 2rem;
+        background-color: red;
+        border-style    : none;
+        border-radius   : 2px;
+        color           : white;
+    }
+}
+
+@media(min-width:900px) {
+    .sidebar-content {
+        display              : grid;
+        gap                  : 0.3rem;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content      : space-between;
+        padding-left         : 10px;
+
+       
+    }
+    .siderbar-content--button{
+        button {
+            width: 15rem;
+            height          : 2rem;
+            background-color: red;
+            border-style    : none;
+            border-radius   : 2px;
+            color           : white;
+        }
+    }
+}

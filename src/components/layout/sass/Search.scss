@@ -1,0 +1,25 @@
+ .search {
+     display        : flex;
+     align-items    : center;
+     justify-content: center;
+    // width: 100vw;
+     input {
+         width        : 90%;
+         height       : 1.8rem;
+         border-radius: 4px solid transparent;
+
+         &::placeholder {
+             padding: 5px;
+             color  : rgb(193, 191, 191);
+         }
+     }
+
+     button {
+         width           : 46px;
+         height          : auto;
+         margin-left     : -48px;
+         border          : none;
+         background-color: transparent;
+     }
+
+ }
