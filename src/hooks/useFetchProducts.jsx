@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getProducts } from "../utils/getProducts";
 
-export const useFetchProducts = (id = 0) => {
+export const useFetchProducts = (id) => {
   const [state, setState] = useState({
     data: [],
     loading: true,

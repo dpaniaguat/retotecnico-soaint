@@ -1,25 +1,25 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { useFetchProducts } from "../../hooks/useFetchProducts";
+import Loading from "../common/Loading";
 import { ProductoItem } from "./ProductoItem";
 import "./sass/Productos.scss";
 
-export const Productos = ({productoId=0}) => {
-  
-    const { data: products, loading } = useFetchProducts(productoId);
+export const Productos = React.memo(({ productoId }) => {
+   
+
+  const { data: products, loading } = useFetchProducts(0);
+ 
 
   return (
     <section className="widget-productos">
       <h2>Productos</h2>
 
-      {loading && (
-        <p className="animate__animated animate__flash">Cargando...</p>
-      )}
-
       <div className="productos">
+        {loading && <Loading texto="Cargando productos..." />}
         {products.map((data) => (
           <ProductoItem key={data.id} {...data} />
         ))}
       </div>
     </section>
   );
-};
+});

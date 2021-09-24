@@ -56,6 +56,7 @@
             width       : 100%;
             text-align  : justify;
             text-justify: inter-word;
+            color: rgb(122, 120, 120);
         }
 
         &__category {
@@ -69,6 +70,18 @@
             span {
                 color    : rgba(3, 24, 41, 0.912);
                 font-size: 1.6rem;
+            }
+        }
+
+        &__rate {
+            height: 1rem;
+            margin-bottom: 1.3rem;
+            img {
+                width : 20px;
+                height: 1rem;
+            }
+            span{
+                color: rgb(114, 112, 112);
             }
         }
 

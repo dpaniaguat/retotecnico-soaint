@@ -11,8 +11,8 @@ console.log(process.env)
 
     return (
         <>
-           <Banner/>
-           <Confianza title={'¿Por qué confiar en nosotros?'}/> 
+           {/* <Banner/> */}
+           {/* <Confianza title={'¿Por qué confiar en nosotros?'}/>  */}
           {/* <Widget title='Productos' children={Confianza}/> */}
           <Productos />
         </>

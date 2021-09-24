@@ -3,12 +3,18 @@ export const Sidebar = () => {
   return (
     <aside className="sidebar">
       <section className="sidebar-content">
-        <h3>Capturador de correos</h3>
-        <div className="siderbar-content--input">
-          <input type="text" />
+        <div className="sidebar-content__head">
+          <h3>ENTÉRATE DE LO NUEVO SOBRE NUEVOS PRODUCTOS.</h3>
+          <p>
+            Obtenga información exclusiva sobre nuevos productos, eventos y más.
+          </p>
         </div>
-        <div className="siderbar-content--button">
-          <button>Suscribirme</button>
+        <div className="sidebar-content__actions">
+          <span>Suscribirme</span>
+          <input type="text" placeholder='Ingrese su correo'/>
+          <div className="sidebar-content__button">
+            <button>Enviar</button>
+          </div>
         </div>
       </section>
     </aside>

@@ -14,7 +14,7 @@ export const RouteData = [
     rolId: 1,
     exact: true,
     privado: false,
-    path: "ofertas",
+    path: "/ofertas",
     component: Catalogo,
   },
   {
@@ -22,7 +22,7 @@ export const RouteData = [
     href: "quienes-somos",
     rolId: 4,
     exact: true,
-    path: "quienes-somos",
+    path: "/quienes-somos",
     privado: false,
     component: QuienesSomos
   },
@@ -31,7 +31,7 @@ export const RouteData = [
     href: "contactenos",
     rolId: 5,
     exact: true,
-    path: "contactenos",
+    path: "/contactenos",
     privado: false,
     component: Contacto
   },
@@ -40,7 +40,7 @@ export const RouteData = [
     href: "login",
     rolId: 6,
     exact: true,
-    path: "login",
+    path: "/login",
     privado: true,
     component: Login
   },
@@ -49,7 +49,7 @@ export const RouteData = [
     href: "pedidos",
     rolId: 7,
     exact: true,
-    path: "pedidos",
+    path: "/pedidos",
     privado: true,
     component: Pedidos
   },

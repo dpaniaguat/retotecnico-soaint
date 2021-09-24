@@ -5,7 +5,7 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import { AuthContext } from "../auth/AuthContext";
+import { AuthContext } from "../context/auth/AuthContext";
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
 

@@ -1,25 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 import { IconCart, IconUser } from "../../assets/icons";
-import Carrito from "../../pages/Carrito/Carrito";
-import { leerDatosCarro } from "../../utils/appCart";
 import { useHistory } from "react-router-dom";
 import "./sass/UserSession.scss";
+import CartContext from "../../context/cart/CartContext";
+import CarritoItems from "../../pages/Carrito/CarritoItems";
 
 export const UserSession = () => {
   const [countItemsCart, setCountItemsCart] = useState(0);
   const [totalPago, setTotalPago] = useState(0);
   const [viewSumary, setViewSumary] = useState(false);
 
-  let carro = [];
+  const { cartItems } = useContext(CartContext);
 
-  setInterval(() => {
-    carro = leerDatosCarro();
-    if (carro) {
-      setCountItemsCart(carro.reduce((a, b) => +a + +b.cantidad, 0));
-      setTotalPago(carro.reduce((a, b) => +a + +b.cantidad*b.precio, 0))
+  useEffect(() => {
+    if (cartItems) {
+      setCountItemsCart(cartItems.reduce((a, b) => +a + +b.cantidad, 0));
+      setTotalPago(cartItems.reduce((a, b) => +a + +b.cantidad * b.precio, 0));
     }
-  }, 100);
+  }, [cartItems]);
 
   let history = useHistory();
 
@@ -38,10 +37,12 @@ export const UserSession = () => {
         onClick={() => setViewSumary(!viewSumary)}
       >
         <IconCart />
-        <span>{countItemsCart}</span>
+          <span className={`${countItemsCart > 0 ? "show" : ""}`}>
+            {countItemsCart}
+          </span>
       </div>
       <div className={`user_session--cartsumary ${!viewSumary ? "hide" : ""}`}>
-        {<Carrito renderCart={countItemsCart} />}
+        {<CarritoItems renderCart={countItemsCart} />}
         <div className="user_session--actions">
           <p>
             <h3>Total a pagar:</h3>

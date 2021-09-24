@@ -1,4 +1,4 @@
-export const getProducts = async (id = 0) => {
+export const getProducts = async (id) => {
   console.log("getProductos id:", id);
 
   const url = `https://fakestoreapi.com/products/${id !== 0 ? id : ""} `;

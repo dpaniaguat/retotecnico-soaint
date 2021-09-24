@@ -5,7 +5,7 @@ import "./sass/Header.scss";
 export const Header = () => {
   return (
     <header className="header">
-      <Link exact to="/home">
+      <Link exact to="/">
         <figure className="header__logo">
           <img
             src="https://soaint.com/wp-content/uploads/2021/04/Logo-Soaint.svg"

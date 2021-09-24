@@ -1,17 +1,18 @@
 import React, { useReducer, useEffect } from 'react';
 import { AppRouter } from './routes/AppRouter'
-import { AuthContext } from './auth/AuthContext';
-import { authReducer } from './auth/authReducer';
+import { AuthContext } from './context/auth/AuthContext';
+import { authReducer } from './context/auth/authReducer';
 import { RouteData } from './routes/RouteData';
+import { leerDatosCarro, sincronizarStorage } from './utils/appCart';
 
 const init = () => {
-  return JSON.parse(localStorage.getItem('userAuth')) || { logged: false };
-}
 
+  return JSON.parse(localStorage.getItem('userAuth')) || { logged: false};
+}
 export const SoaintApp = () => {
 
   const [user, dispatch] = useReducer(authReducer, {}, init);
-
+ 
   useEffect(() => {
     localStorage.setItem('userAuth', JSON.stringify(user));
   }, [user]);

@@ -1,36 +1,22 @@
-import React, { useEffect, useState } from "react";
-import { eliminarProducto, leerDatosCarro } from "../../utils/appCart";
+import React, { useEffect, useState, useContext } from "react";
+import CartContext from "../../context/cart/CartContext";
+import CarritoItems from "./CarritoItems";
+
 import "./sass/carrito.scss";
 
-const Carrito = ({renderCart}) => {
-  const [carrito, setCarrito] = useState([]);
-
-  useEffect(() => {
-    setCarrito(leerDatosCarro());
-  }, [renderCart]);
-
-  const handleDeleteItemCart = (idProducto) => {
-    console.log("eliminando id del carro", idProducto);
-    eliminarProducto(idProducto);
-    setCarrito(leerDatosCarro());
-  };
+const Carrito = () => {
+  const { removeItem, cartItems } = useContext(CartContext);
 
   return (
-    <div className="carritoCompras">
-      {carrito.map(({ id, precio, cantidad, titulo, imagen }) => (
-        <div className="carro_item" key={id}>
-          <div className="carro_item--imagenCover">
-            <img src={imagen} alt={titulo} />
-          </div>
-          <span>{titulo}</span>
-          <span>S/{precio}</span>
-          <span>{cantidad}</span>
-          <span>S/{precio * cantidad}</span>
-          <div className="item-opcion">
-            <i onClick={() => handleDeleteItemCart(id)}>Eliminar</i>
-          </div>
+    <div className="carrito">
+      <section className="carrito-content">
+        <div className="breadcrumb">
+          <p>Inicio</p>
+          <i>/</i>
+          <span>Carro de compras</span>
         </div>
-      ))}
+        {<CarritoItems />}
+      </section>
     </div>
   );
 };

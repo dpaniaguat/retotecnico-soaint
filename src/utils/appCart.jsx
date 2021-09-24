@@ -31,7 +31,11 @@ const agregarProducto = ({ imagen, titulo, precio, id, cantidad }) => {
   }
 
   console.log(articulosCarrito);
+
   sincronizarStorage();
+
+return articulosCarrito;
+
 };
 
 const leerDatosCarro = () => {
@@ -54,4 +58,4 @@ const sincronizarStorage = () => {
   localStorage.setItem("carrito", JSON.stringify(articulosCarrito));
 };
 
-export { agregarProducto, leerDatosCarro, eliminarProducto };
+export { agregarProducto, leerDatosCarro, eliminarProducto,sincronizarStorage };
