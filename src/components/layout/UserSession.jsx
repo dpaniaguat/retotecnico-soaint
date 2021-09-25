@@ -5,20 +5,10 @@ import { useHistory } from "react-router-dom";
 import "./sass/UserSession.scss";
 import CartContext from "../../context/cart/CartContext";
 import CarritoItems from "../../pages/Carrito/CarritoItems";
+import { parseMoney } from "../../utils/util";
 
 export const UserSession = () => {
-  const [countItemsCart, setCountItemsCart] = useState(0);
-  const [totalPago, setTotalPago] = useState(0);
-  const [viewSumary, setViewSumary] = useState(false);
-
-  const { cartItems } = useContext(CartContext);
-
-  useEffect(() => {
-    if (cartItems) {
-      setCountItemsCart(cartItems.reduce((a, b) => +a + +b.cantidad, 0));
-      setTotalPago(cartItems.reduce((a, b) => +a + +b.cantidad * b.precio, 0));
-    }
-  }, [cartItems]);
+  const { cartSumary, showHideCart, showCart } = useContext(CartContext);
 
   let history = useHistory();
 
@@ -32,24 +22,21 @@ export const UserSession = () => {
         <IconUser />
       </div>
       <span>|</span>
-      <div
-        className="user_session__cart"
-        onClick={() => setViewSumary(!viewSumary)}
-      >
+      <div className="user_session__cart" onClick={() => showHideCart()}>
         <div className="user_session__cart_icons">
           <IconCart />
-          <span className={`${countItemsCart > 0 ? "show" : ""}`}>
-            {countItemsCart}
+          <span className={`${cartSumary.totalItems > 0 ? "show" : ""}`}>
+            {cartSumary.totalItems}
           </span>
         </div>
       </div>
-      <div className={`user_session--cartsumary ${!viewSumary ? "hide" : ""}`}>
-        {<CarritoItems renderCart={countItemsCart} />}
+      <div className={`user_session--cartsumary ${!showCart ? "hide" : ""}`}>
+        {<CarritoItems renderCart={cartSumary} />}
         <div className="user_session--actions">
           <p>
             <h3>Total a pagar:</h3>
             <hr />
-            <h3>S/{totalPago}</h3>
+            <h3>S/{parseMoney(cartSumary.subTotal)}</h3>
           </p>
           <br />
           <button className="user_session--goToCart" onClick={handleGotoCart}>

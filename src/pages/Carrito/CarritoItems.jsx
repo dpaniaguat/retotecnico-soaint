@@ -19,8 +19,8 @@ const CarritoItems = () => {
             <img src={imagen} alt={titulo} />
           </div>
           <span>{titulo}</span>
-          <span>S/{precio}</span>
           <span>{cantidad}</span>
+          <span>S/{precio}</span>
           <span>S/{precio * cantidad}</span>
           <div className="item-opcion">
             <i onClick={() => handleDeleteItemCart(id)}>Eliminar</i>

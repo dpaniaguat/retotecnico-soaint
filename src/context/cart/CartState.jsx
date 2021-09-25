@@ -1,6 +1,7 @@
 import { useReducer } from "react";
 import { types } from "../../types/types";
 import { leerDatosCarro } from "../../utils/appCart";
+import { parseMoney } from "../../utils/util";
 import CartContext from "./CartContext";
 
 import CartReducer from "./CartReducer";
@@ -39,12 +40,20 @@ const CartState = ({ children }) => {
       value={{
         showCart: state.showCart,
         cartItems: state.cartItems,
+        cartSumary: {
+          totalItems: state?.cartItems.reduce((a, b) => +a + +b.cantidad, 0),
+          subTotal: parseFloat(
+            parseMoney(
+              state?.cartItems.reduce((a, b) => +a + +b.cantidad * b.precio, 0)
+            )
+          ),
+        },
         addToCart,
         showHideCart,
         removeItem,
       }}
     >
-        {children}
+      {children}
     </CartContext.Provider>
   );
 };

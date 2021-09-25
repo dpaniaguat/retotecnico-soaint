@@ -1,0 +1,61 @@
+.carrito-resumen {
+    display         : flex;
+    flex-flow       : column wrap;
+    justify-content : space-between;
+    background-color: white;
+    padding         : 2rem;
+    border-radius   : 1.2rem;
+    align-items     : center;
+    height          : 50vh;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    .sumaryCart {
+        display        : flex;
+        flex-flow      : column wrap;
+        justify-content: space-between;
+        width          : 100%;
+
+        .totalItems {
+            display        : flex;
+            flex-flow      : row wrap;
+            justify-content: space-between;
+            border-bottom  : .1px dashed #ccc;
+            padding-bottom : 10px;
+        }
+
+        .sumary_elements {
+            padding-top    : 2rem;
+            display        : flex;
+            flex-flow      : column wrap;
+            justify-content: space-between;
+        }
+
+        .sumary__element {
+            display        : flex;
+            flex-flow      : row wrap;
+            justify-content: space-between;
+
+            span {
+                color    : rgb(84, 84, 84);
+                font-size: 1.2rem;
+            }
+        }
+
+        .sumary__button {
+            width       : 100%;
+            padding-top : 1rem;
+            border-style: none;
+
+            button {
+                width           : 100%;
+                background-color: red;
+                height          : 3rem;
+                color           : white;
+                border-style    : none;
+                border-radius   : 5px;
+
+            }
+        }
+    }
+}

@@ -72,7 +72,7 @@
         transition               : visibility 0s, opacity 0.5s linear;
 
         &.hide {
-            opacity    : 0;
+            opacity       : 0;
             // right      : -28rem;
             //  display: none;
             // animation: ocultaElemento 1s infinite;
@@ -84,6 +84,7 @@
         flex-direction : column;
         justify-content: center;
         align-items    : center;
+        height:0rem
     }
 
     &--goToCart {
@@ -99,12 +100,10 @@
 }
 
 @keyframes ocultaElemento {
-    0% {
-         
-    }
+    0% {}
 
     100% {
-        display:none;
+        display: none;
     }
 
 }
