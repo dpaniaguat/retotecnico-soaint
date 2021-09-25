@@ -56,35 +56,42 @@
     }
 
     &--cartsumary {
-        position                 : absolute;
-        top                      : 7rem;
-        background-color         : white;
-        width                    : 28rem;
+        position                    : fixed;
+        top                         : 7rem;
+        background-color            : white;
+        width                       : 28rem;
         // height          : 28rem;
-        height                   : 85vh;
-        overflow                 : auto;
+        height                      : 100vh;
+        overflow                    : auto;
         // border-radius   : 1rem;
-        border-bottom            : 1px solid #ccc;
-        border-bottom-left-radius: 2rem;
-        border-left              : 1px solid rgb(241, 240, 240);
-        right                    : 0px;
+        border-bottom               : 1px solid #ccc;
+        border-bottom-left-radius   : 2rem;
+        border-left                 : 1px solid rgb(241, 240, 240);
+        // right                    : 0px;
         // 
-        transition               : visibility 0s, opacity 0.5s linear;
+        transition                  : visibility 0s, opacity 0.5s linear;
 
         &.hide {
             opacity       : 0;
-            // right      : -28rem;
+            right         : -28rem;
             //  display: none;
-            // animation: ocultaElemento 1s infinite;
+            // animation  : ocultaElemento 1s;
         }
     }
 
     &--actions {
-        display        : flex;
-        flex-direction : column;
-        justify-content: center;
-        align-items    : center;
-        height:0rem
+        display         : flex;
+        flex-direction  : column;
+        justify-content : center;
+        align-items     : center;
+        height          : 10rem;
+        position        : fixed;
+        bottom          : 0px;
+        width           : 25rem;
+        padding-top     : 16px;
+        z-index         : 0;
+        background-color: white;
+        border-top: 1px dashed rgb(192, 220, 247);
     }
 
     &--goToCart {

@@ -31,7 +31,7 @@ export const UserSession = () => {
         </div>
       </div>
       <div className={`user_session--cartsumary ${!showCart ? "hide" : ""}`}>
-        {<CarritoItems renderCart={cartSumary} />}
+        <CarritoItems />
         <div className="user_session--actions">
           <p>
             <h3>Total a pagar:</h3>
