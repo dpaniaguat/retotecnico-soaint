@@ -1,12 +1,11 @@
 .carrito-resumen {
     display         : flex;
     flex-flow       : column wrap;
-    justify-content : space-between;
     background-color: white;
     padding         : 2rem;
     border-radius   : 1.2rem;
     align-items     : center;
-    height          : 50vh;
+    height          : 35vh;
 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
@@ -15,6 +14,7 @@
         flex-flow      : column wrap;
         justify-content: space-between;
         width          : 100%;
+        margin-top     : 3rem;
 
         .totalItems {
             display        : flex;

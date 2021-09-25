@@ -24,6 +24,7 @@
     width: 100%;
     padding         : 1rem;
     background-color: white;
+    border-radius: 1rem;
 
     .carro_item {
         display                 : grid;
@@ -60,7 +61,7 @@
             cursor: pointer;
 
             i {
-                color: #e40658;
+                color: #e80a0a;
             }
         }
 

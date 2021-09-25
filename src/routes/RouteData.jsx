@@ -1,4 +1,5 @@
 // import Buscador from "../pages/Buscador/Buscador";
+import Caja from "../pages/Caja/Caja";
 import Carrito from "../pages/Carrito/Carrito";
 import Catalogo from "../pages/Catalogo/Catalogo";
 import Contacto from "../pages/Contenido/Contacto";
@@ -70,5 +71,14 @@ export const RouteData = [
     path: "/carrito",
     privado: true,
     component: Carrito
+  },
+  {
+    menu: "checkout",
+    href: "checkout",
+    rolId: 10,
+    exact: true,
+    path: "/checkout",
+    privado: true,
+    component: Caja
   }
 ];

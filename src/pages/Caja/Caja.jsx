@@ -2,8 +2,8 @@ import React from 'react'
 
 const Caja = () => {
     return (
-        <div>
-          Caja  
+        <div className="checkout">
+          Checkout  
         </div>
     )
 }
