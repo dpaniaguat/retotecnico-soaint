@@ -1,64 +1,43 @@
 .widget {
-    width                : 100%;
-    height               : auto;
-    background-color     : #474747;
-    display              : grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows   : auto;
-    justify-items        : center;
-    padding              : 50px;
-    transition           : all 0.5s ease;
+    width                   : 100%;
+    // height               : auto;
+    // background-color     : #474747;
+    display                 : flex;
+    flex-flow               : column wrap;
+    justify-items           : center;
+    align-items             : center;
+    transition              : all 0.5s ease;
 
-    &__head {
+    &-body {
+        width: 100%;
+    }
+
+    &-head {
         width          : 100%;
         display        : flex;
-        flex-flow      : row wrap;
+        flex-flow      : column wrap;
         justify-content: center;
         align-items    : center;
-        padding-bottom : 30px;
+        padding-top    : 1.7rem;
+        padding-bottom : 0.1rem;
 
-        strong {
-            font-size  : 30px;
-            font-weight: bold;
-            color      : white;
+        &__title {
+            font-size  : 2rem;
+            color      : black;
+            font-family: 'Open Sans', 'Helvetica Neue', Helvetica;
+        }
+
+        &__subtitle {
+            font-size  : 1.4rem;
+            color      : rgb(160, 159, 159);
+            font-family: 'Open Sans', 'Helvetica Neue', Helvetica;
         }
 
         hr {
-            border: 1px solid white;
+            border: 1px solid #e6e6e6;
             width : 20%;
             height: 0px;
             margin: 10px;
-        }
-    }
-
-    &__elements {
-        width                : 90%;
-        display              : grid;
-        grid-auto-rows       : auto;
-        gap                  : 10px;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
-        justify-items        : center;
-
-        &--item {
-            height            : 15rem;
-            width             : 15rem;
-            border-radius     : 10px;
-            display           : flex;
-            flex-flow         : column wrap;
-            justify-content   : center;
-            align-items       : center;
-            color             : white;
-            font-size         : 20px;
-            text-align        : center;
-
-            img {
-                height: 5.2rem;
-            }
-
-            span {
-                padding-top: 15px;
-            }
-
         }
     }
 }

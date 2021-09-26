@@ -6,8 +6,7 @@ import CarritoResumen from "./CarritoResumen";
 import "./sass/carrito.scss";
 
 const Carrito = () => {
-  const { removeItem, cartItems } = useContext(CartContext);
-
+  
   return (
     <div className="carrito">
       <div className="breadcrumb">
