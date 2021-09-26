@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
-import CartContext from "../../context/cart/CartContext";
+import React from "react";
 import CarritoItems from "./CarritoItems";
 import CarritoResumen from "./CarritoResumen";
 

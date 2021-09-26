@@ -63,7 +63,7 @@ $height-footer--devices : 100%;
         "search search"50px 
         "navbar navbar"50px 
         "main main"auto 
-        "sidebar sidebar"100px 
+        "sidebar sidebar"400px 
         "footer footer"auto;
 }
 
@@ -77,7 +77,7 @@ $height-footer--devices : 100%;
             "navbar navbar"50px 
             "sidebar main"auto 
             "footer footer"auto / 
-            100px auto;
+            200px auto;
     }
 }
 
@@ -87,9 +87,9 @@ $height-footer--devices : 100%;
             "cinta cinta cinta cinta"30px 
             "header navbar search user_session" 120px 
             "main main main main"auto 
-            "sidebar sidebar sidebar sidebar"100px 
+            "sidebar sidebar sidebar sidebar"200px 
             "footer footer footer footer"auto /
-            180px auto;
+            200px auto;
     }
     .header{
         margin-left: 20px;

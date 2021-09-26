@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, {useContext } from "react";
 
 import { IconCart, IconUser } from "../../assets/icons";
 import { useHistory } from "react-router-dom";
@@ -33,11 +33,11 @@ export const UserSession = () => {
       <div className={`user_session--cartsumary ${!showCart ? "hide" : ""}`}>
         <CarritoItems />
         <div className="user_session--actions">
-          <p>
+          <div>
             <h3>Total a pagar:</h3>
             <hr />
             <h3>S/{parseMoney(cartSumary.subTotal)}</h3>
-          </p>
+          </div>
           <br />
           <button className="user_session--goToCart" onClick={handleGotoCart}>
             IR AL CARRITO

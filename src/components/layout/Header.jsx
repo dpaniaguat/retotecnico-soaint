@@ -8,8 +8,8 @@ export const Header = () => {
       <Link exact to="/">
         <figure className="header__logo">
           <img
-            src="https://soaint.com/wp-content/uploads/2021/04/Logo-Soaint.svg"
-            alt=""
+            src={process.env.REACT_APP_LOGO_APP}
+            alt="logo principal"
           />
         </figure>
       </Link>
