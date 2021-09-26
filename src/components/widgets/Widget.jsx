@@ -1,24 +1,20 @@
 import "./sass/Widget.scss";
 
-export const Widget = ({
-  title = "Mi widget",
-  backgroundColor = "grey",
-  component: Component,
-}) => {
+const Widget = ({ title = "", subtitle = "", children }) => {
   return (
-    <section className="widget confianza">
-      <div className="widget__head">
-        <hr />
-        <strong className="widget__title">{title}</strong>
-        <hr />
-      </div>
-
-      <div className="widget__elements">
-        <div className="widget__elements--item">
-          <img alt="" />
-          <span>Las mejores ofertas en productos.</span>
+    <section className="widget">
+      {title.length > 0 && (
+        <div className="widget-head">
+          <h3 className="widget-head__title">{title}</h3>
+          {subtitle.length > 0 && (
+            <span className="widget-head__subtitle">{subtitle}</span>
+          )}
+          <hr />
         </div>
-      </div>
+      )}
+      <div className="widget-body">{children}</div>
     </section>
   );
 };
+
+export default Widget;

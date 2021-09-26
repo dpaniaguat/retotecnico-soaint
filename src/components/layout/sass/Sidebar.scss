@@ -1,37 +1,50 @@
 @import '../../../styles/base/settings';
 
 .sidebar-content {
-    display              : flex;
-    gap                  : 0.3rem;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content      : space-between;
-    padding-left         : 10px;
-    background-color     : $fixcolor;
-    width                : 100vw;
+    display        : flex;
+    flex-flow      : row wrap;
+    justify-content: space-between;
+    align-items    : center;
+    width          : 100vw;
 
     &__head {
+        display        : flex;
+        flex-flow      : column wrap;
+        justify-content: center;
+        align-items    : center;
+        /* padding     : 3.5rem; */
+        color          : white;
+
         h3 {
             margin-right: 10px;
             color       : white;
         }
 
         p {
-            font-size: 12px;
-            color    : rgb(180, 179, 179);
+            margin-top: 0.4rem;
+            font-size : 1rem;
+            color     : rgb(180, 179, 179);
         }
     }
 
     &__actions {
-        width: 100%;
+        display        : flex;
+        flex-flow      : column wrap;
+        justify-content: center;
+        align-items    : center;
+        width          : 100%;
+        padding-top    : 0.5rem;
 
         span {
-            color: white;
-            width: 20%
+            color         : white;
+            padding-top: 1.6rem;
+            padding-bottom: 0.6rem;
+            text-transform: uppercase;
         }
 
         input {
-            width        : 40%;
-            height       : 2rem;
+            width        : 100vw;
+            height       : 3rem;
             border-style : none;
             border-bottom: 1px solid #ffff;
             border-radius: 3px;
@@ -40,16 +53,17 @@
         input::placeholder {
             padding  : 5px;
             color    : #ccc;
-            font-size: 12px;
+            font-size: 1rem;
         }
     }
 
     &__button {
-        width: 40%;
+        // width: 40%;
+        padding-top: 0.2rem;
 
         button {
-            height          : 2rem;
-            width           : 72%;
+            height          : 3rem;
+            width           : 100vw;
             background-color: red;
             border-style    : none;
             border-radius   : 2px;
@@ -61,43 +75,53 @@
 
 @media(min-width:600px) {
     .sidebar-content {
-        display              : flex;
-        grid-gap             : 0.3rem;
-        gap                  : 2.3rem;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content      : space-between;
-        padding              : 9rem;
-        width                : 100vw;
+        display           : flex;
+        flex-flow         : column wrap;
+        /* justify-content: space-between; */
+        align-items       : center;
+        width             : 100vw;
 
-        &__actions {
-            width          : 100%;
+        .sidebar-content__head {
             display        : flex;
-            flex-flow      : row wrap;
-            justify-content: space-around;
+            flex-flow      : column wrap;
+            justify-content: center;
             align-items    : center;
-
-            span {
-                color: white;
-                width: 20%
-            }
-
-            input::placeholder {
-                padding  : 5px;
-                color    : #ccc;
-                font-size: 12px;
-            }
+            /* padding     : 3.5rem; */
+            color          : white;
         }
 
-        &__button {
-            width: 10rem;
+        .sidebar-content__actions {
+            display        : flex;
+            flex-flow      : column wrap;
+            justify-content: center;
+            align-items    : center;
+            width          : 100%;
 
-            button {
-                width           : 100%;
-                background-color: red;
-                border-style    : none;
-                border-radius   : 9px;
-                color           : white;
+            /* padding-top: 3rem; */
+            .sidebar-content__button {
+                /* padding-top: 0.2rem; */
+                display        : flex;
+                justify-content: center;
+                align-items    : center;
+
+
             }
+        }
+        .sidebar-content__actions input {
+            width        : 23rem;
+            height       : 3rem;
+            border-style : none;
+            border-bottom: 1px solid #ffff;
+            border-radius: 3px;
+        }
+
+        .sidebar-content__button button {
+            height          : 3.1rem;
+            width           : 10rem;
+            background-color: red;
+            border-style    : none;
+            border-radius   : 2px;
+            color           : white;
         }
     }
 
@@ -105,42 +129,54 @@
 
 @media(min-width:900px) {
     .sidebar-content {
-        display              : flex;
-        grid-gap             : 0.3rem;
-        gap                  : 2.3rem;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content      : space-between;
-        padding              : 9rem;
+        display           : flex;
+        flex-flow         : column wrap;
+        /* justify-content: space-between; */
+        align-items       : center;
+        width             : 100vw;
 
-        &__head {
-            width: 50rem;
-        }
-
-        &__actions {
+        .sidebar-content__head {
             display        : flex;
-            flex-flow      : row wrap;
-            justify-content: space-around;
+            flex-flow      : column wrap;
+            justify-content: center;
             align-items    : center;
-
-            input::placeholder {
-                padding  : 5px;
-                color    : #ccc;
-                font-size: 12px;
-            }
+            /* padding     : 3.5rem; */
+            color          : white;
         }
 
-        &__button {
-            width: 10rem;
+        .sidebar-content__actions {
+            display        : flex;
+            flex-flow      : column wrap;
+            justify-content: center;
+            align-items    : center;
+            width          : 100%;
 
-            button {
-                width           : 100%;
-                background-color: red;
-                border-style    : none;
-                border-radius   : 9px;
-                color           : white;
+            /* padding-top: 3rem; */
+            .sidebar-content__button {
+                /* padding-top: 0.2rem; */
+                display        : flex;
+                justify-content: center;
+                align-items    : center;
+
+
             }
+        }
+        .sidebar-content__actions input {
+            width        : 23rem;
+            height       : 3rem;
+            border-style : none;
+            border-bottom: 1px solid #ffff;
+            border-radius: 3px;
+        }
+
+        .sidebar-content__button button {
+            height          : 3.1rem;
+            width           : 10rem;
+            background-color: red;
+            border-style    : none;
+            border-radius   : 2px;
+            color           : white;
         }
     }
-
 
 }

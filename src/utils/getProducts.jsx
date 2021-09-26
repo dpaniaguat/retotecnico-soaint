@@ -1,7 +1,7 @@
 export const getProducts = async (id) => {
   console.log("getProductos id:", id);
 
-  const url = `https://fakestoreapi.com/products/${id !== 0 ? id : ""} `;
+  const url = `${process.env.REACT_APP_API_URL}${id !== 0 ? id : ""} `;
   const resp = await fetch(url);
   const data = await resp.json();
 

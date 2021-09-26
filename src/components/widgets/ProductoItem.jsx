@@ -1,10 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../context/auth/AuthContext";
 import CartContext from "../../context/cart/CartContext";
-import { types } from "../../types/types";
-import { agregarProducto, leerDatosCarro } from "../../utils/appCart";
-import { UserSession } from "../layout/UserSession";
+import { agregarProducto } from "../../utils/appCart";
 
 export const ProductoItem = ({ id, title, price, image }) => {
 

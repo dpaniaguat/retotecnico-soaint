@@ -1,19 +1,14 @@
-import React, { useMemo } from "react";
+import React from "react";
 import { useFetchProducts } from "../../hooks/useFetchProducts";
 import Loading from "../common/Loading";
 import { ProductoItem } from "./ProductoItem";
 import "./sass/Productos.scss";
 
-export const Productos = React.memo(({ productoId }) => {
-   
-
+export const Productos = ( ) => {
   const { data: products, loading } = useFetchProducts(0);
- 
 
   return (
     <section className="widget-productos">
-      <h2>Productos</h2>
-
       <div className="productos">
         {loading && <Loading texto="Cargando productos..." />}
         {products.map((data) => (
@@ -22,4 +17,4 @@ export const Productos = React.memo(({ productoId }) => {
       </div>
     </section>
   );
-});
+};

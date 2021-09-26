@@ -1,13 +1,11 @@
-import React, { useEffect, useState, useContext } from "react";
-import CartContext from "../../context/cart/CartContext";
+import React from "react";
 import CarritoItems from "./CarritoItems";
 import CarritoResumen from "./CarritoResumen";
 
 import "./sass/carrito.scss";
 
 const Carrito = () => {
-  const { removeItem, cartItems } = useContext(CartContext);
-
+  
   return (
     <div className="carrito">
       <div className="breadcrumb">
