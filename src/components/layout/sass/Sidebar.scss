@@ -21,7 +21,7 @@
         }
 
         p {
-            margin-top: 2rem;
+            margin-top: 0.4rem;
             font-size : 1rem;
             color     : rgb(180, 179, 179);
         }
@@ -33,11 +33,12 @@
         justify-content: center;
         align-items    : center;
         width          : 100%;
-        padding-top    : 3rem;
+        padding-top    : 0.5rem;
 
         span {
             color         : white;
-            padding-bottom: 1rem;
+            padding-top: 1.6rem;
+            padding-bottom: 0.6rem;
             text-transform: uppercase;
         }
 
@@ -74,43 +75,53 @@
 
 @media(min-width:600px) {
     .sidebar-content {
-        display              : flex;
-        grid-gap             : 0.3rem;
-        gap                  : 2.3rem;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content      : space-between;
-        padding              : 9rem;
-        width                : 100vw;
+        display           : flex;
+        flex-flow         : column wrap;
+        /* justify-content: space-between; */
+        align-items       : center;
+        width             : 100vw;
 
-        &__actions {
-            width          : 100%;
+        .sidebar-content__head {
             display        : flex;
-            flex-flow      : row wrap;
-            justify-content: space-around;
+            flex-flow      : column wrap;
+            justify-content: center;
             align-items    : center;
-
-            span {
-                color: white;
-                width: 20%
-            }
-
-            input::placeholder {
-                padding  : 5px;
-                color    : #ccc;
-                font-size: 12px;
-            }
+            /* padding     : 3.5rem; */
+            color          : white;
         }
 
-        &__button {
-            width: 10rem;
+        .sidebar-content__actions {
+            display        : flex;
+            flex-flow      : column wrap;
+            justify-content: center;
+            align-items    : center;
+            width          : 100%;
 
-            button {
-                width           : 100%;
-                background-color: red;
-                border-style    : none;
-                border-radius   : 9px;
-                color           : white;
+            /* padding-top: 3rem; */
+            .sidebar-content__button {
+                /* padding-top: 0.2rem; */
+                display        : flex;
+                justify-content: center;
+                align-items    : center;
+
+
             }
+        }
+        .sidebar-content__actions input {
+            width        : 23rem;
+            height       : 3rem;
+            border-style : none;
+            border-bottom: 1px solid #ffff;
+            border-radius: 3px;
+        }
+
+        .sidebar-content__button button {
+            height          : 3.1rem;
+            width           : 10rem;
+            background-color: red;
+            border-style    : none;
+            border-radius   : 2px;
+            color           : white;
         }
     }
 
@@ -118,42 +129,54 @@
 
 @media(min-width:900px) {
     .sidebar-content {
-        display              : flex;
-        grid-gap             : 0.3rem;
-        gap                  : 2.3rem;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content      : space-between;
-        padding              : 9rem;
+        display           : flex;
+        flex-flow         : column wrap;
+        /* justify-content: space-between; */
+        align-items       : center;
+        width             : 100vw;
 
-        &__head {
-            width: 50rem;
-        }
-
-        &__actions {
+        .sidebar-content__head {
             display        : flex;
-            flex-flow      : row wrap;
-            justify-content: space-around;
+            flex-flow      : column wrap;
+            justify-content: center;
             align-items    : center;
-
-            input::placeholder {
-                padding  : 5px;
-                color    : #ccc;
-                font-size: 12px;
-            }
+            /* padding     : 3.5rem; */
+            color          : white;
         }
 
-        &__button {
-            width: 10rem;
+        .sidebar-content__actions {
+            display        : flex;
+            flex-flow      : column wrap;
+            justify-content: center;
+            align-items    : center;
+            width          : 100%;
 
-            button {
-                width           : 100%;
-                background-color: red;
-                border-style    : none;
-                border-radius   : 9px;
-                color           : white;
+            /* padding-top: 3rem; */
+            .sidebar-content__button {
+                /* padding-top: 0.2rem; */
+                display        : flex;
+                justify-content: center;
+                align-items    : center;
+
+
             }
+        }
+        .sidebar-content__actions input {
+            width        : 23rem;
+            height       : 3rem;
+            border-style : none;
+            border-bottom: 1px solid #ffff;
+            border-radius: 3px;
+        }
+
+        .sidebar-content__button button {
+            height          : 3.1rem;
+            width           : 10rem;
+            background-color: red;
+            border-style    : none;
+            border-radius   : 2px;
+            color           : white;
         }
     }
-
 
 }
