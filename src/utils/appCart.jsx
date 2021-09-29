@@ -30,8 +30,6 @@ const agregarProducto = ({ imagen, titulo, precio, id, cantidad }) => {
     articulosCarrito = [...articulosCarrito, infoProducto];
   }
 
-  console.log(articulosCarrito);
-
   sincronizarStorage();
 
 return articulosCarrito;
@@ -45,7 +43,6 @@ const leerDatosCarro = () => {
 
 // Elimina el Producto del carrito
 const eliminarProducto = (idProducto) => {
-  console.log("eliminarProducto->idProducto->", idProducto);
   // Eliminar del arreglo del carrito
   articulosCarrito = articulosCarrito.filter(
     (Producto) => Producto.id !== idProducto

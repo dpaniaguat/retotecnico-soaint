@@ -1,20 +1,23 @@
-import React, { useMemo, useContext } from "react";
+import React, { useMemo, useContext,useEffect } from "react";
 import { useParams, Redirect } from "react-router-dom";
 import Loading from "../../components/common/Loading";
 import CartContext from "../../context/cart/CartContext";
-import { useFetchProducts } from "../../hooks/useFetchProducts";
+// import { useFetchProducts } from "../../hooks/useFetchProducts";
 import { agregarProducto } from "../../utils/appCart";
 import { IconCart, IconStar } from "../../assets/icons";
 import "./sass/ProductoDetalle.scss";
 import { ProductosRecomendados } from "../../components/widgets/ProductosRecomendados";
+import { useFetch } from "../../hooks/useFetch";
 
 const ProductoDetalle = ({ history }) => {
   const { productoId } = useParams();
 
-  const { addToCart,showHideCart } = useContext(CartContext);
+  const { addToCart, showHideCart } = useContext(CartContext);
 
   //const {  producto } = useMemo(() => useFetchProducts( productoId ), [ productoId ]);
-  const { data: producto, loading } = useFetchProducts(productoId);
+  const { loading, data } = useFetch(
+    `${process.env.REACT_APP_API_URL}/${productoId > 0 ? productoId : ""}`
+  );
 
   const handleAddToCart = (id, title, price, image) => {
     const producto = {
@@ -29,9 +32,9 @@ const ProductoDetalle = ({ history }) => {
     showHideCart();
   };
 
-  //   if (producto.length === 0) {
-  //     return <Redirect to="/" />;
-  //   }
+  // if (!Array.isArray(data) && loading) {
+  //   return <Redirect to="/" />;
+  // }
 
   const handleReturn = () => {
     if (history.length <= 2) {
@@ -41,13 +44,37 @@ const ProductoDetalle = ({ history }) => {
     }
   };
 
-  const { category, description, image, price, rating, title, id } = producto;
+  const {
+    category = "",
+    description = "",
+    image = "",
+    price = 0,
+    rating = [],
+    title = "",
+    id = 0,
+  } = !!data && data ;
 
   let arrayRate = [];
+
   for (let i = 1; i < rating?.rate; i++) {
     arrayRate.push(i);
   }
 
+  /*
+  useEffect(() => {
+
+    if (loading && data === null){
+      console.log('loading, data->',loading, data)
+      if (history.length <= 2) {
+        history.push("/");
+      } else {
+        history.goBack();
+      }
+    }
+    
+    
+  }, [ loading]);
+*/
   return (
     <>
       {(loading && (

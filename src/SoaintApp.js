@@ -3,7 +3,6 @@ import { AppRouter } from './routes/AppRouter'
 import { AuthContext } from './context/auth/AuthContext';
 import { authReducer } from './context/auth/authReducer';
 import { RouteData } from './routes/RouteData';
-import { leerDatosCarro, sincronizarStorage } from './utils/appCart';
 
 const init = () => {
 

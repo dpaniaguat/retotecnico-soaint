@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { IconDelete } from "../../assets/icons";
 import CartContext from "../../context/cart/CartContext";
-import { eliminarProducto, leerDatosCarro } from "../../utils/appCart";
+import { eliminarProducto } from "../../utils/appCart";
 import "./sass/carrito.scss";
 
 const CarritoItems = () => {
@@ -9,7 +9,6 @@ const CarritoItems = () => {
   const { removeItem, cartItems, showCart } = useContext(CartContext);
 
   const handleDeleteItemCart = (idProducto) => {
-    console.log('delete producto: ', idProducto );
     eliminarProducto(idProducto);
     removeItem(idProducto);
   };
