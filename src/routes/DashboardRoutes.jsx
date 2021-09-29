@@ -9,23 +9,33 @@ export const DashboardRoutes = (roles, privado = false) => {
     <>
       <Layout>
         <Switch>
-          <Route key={0} exact path="/" component={Home} />
+          <Route key={0} exact={true} path="/" component={Home} />
           {RouteData.map(
-            ({ component, path, rolId }) =>
+            ({ component, path, rolId, exact }) =>
               (!privado && (
-                <Route key={rolId} exact path={path} component={component} />
+                <Route
+                  key={rolId}
+                  exact={exact}
+                  path={path}
+                  component={component}
+                />
               )) ||
               null
           )}
           {privado &&
             RouteData.map(
-              ({ component, path, rolId }) =>
+              ({ component, path, rolId, exact }) =>
                 (privado && (
-                  <Route key={rolId} exact path={path} component={component} />
+                  <Route
+                    key={rolId}
+                    exact={exact}
+                    path={path}
+                    component={component}
+                  />
                 )) ||
                 null
             )}
-          <Route exact path="/" component={Home} />
+          <Route exact={true} path="/" component={Home} />
           <Redirect to="/" />
         </Switch>
       </Layout>
