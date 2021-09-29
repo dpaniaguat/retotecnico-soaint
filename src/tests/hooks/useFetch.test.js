@@ -1,7 +1,6 @@
 import { renderHook } from "@testing-library/react-hooks";
 import { useFetch } from "../../hooks/useFetch";
 
-
 describe('Pruebas en useFetch', () => {
 
     test('debe de retornar la información por defecto', () => {
@@ -14,7 +13,6 @@ describe('Pruebas en useFetch', () => {
         expect( error ).toBe(null);
 
     });
-
 
     test('debe de tener la info deseada, loading false, error false', async() => {
         
@@ -41,9 +39,6 @@ describe('Pruebas en useFetch', () => {
         expect( loading ).toBe( false );
         expect( error ).toBe( 'No se pudo cargar la info' );
 
-
     })
-    
-    
-    
+   
 })

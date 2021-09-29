@@ -1,3 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`message box 1`] = `ShallowWrapper {}`;
+
+exports[`test lista productos component <Productos/> 1`] = `ShallowWrapper {}`;
