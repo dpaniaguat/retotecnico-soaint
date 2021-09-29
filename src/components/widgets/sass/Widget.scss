@@ -1,3 +1,5 @@
+@import '../../../styles/base/settings';
+
 .widget {
     width                   : 100%;
     // height               : auto;
@@ -24,13 +26,13 @@
         &__title {
             font-size  : 1.5rem;
             color      : black;
-            font-family: 'Open Sans', 'Helvetica Neue', Helvetica;
+            font-family: $font-family-1;
         }
 
         &__subtitle {
             font-size  : 1.4rem;
             color      : rgb(160, 159, 159);
-            font-family: 'Open Sans', 'Helvetica Neue', Helvetica;
+            font-family: $font-family-1;
         }
 
         hr {

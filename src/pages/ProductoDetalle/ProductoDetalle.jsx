@@ -4,7 +4,7 @@ import Loading from "../../components/common/Loading";
 import CartContext from "../../context/cart/CartContext";
 import { useFetchProducts } from "../../hooks/useFetchProducts";
 import { agregarProducto } from "../../utils/appCart";
-import { IconCart } from "../../assets/icons";
+import { IconCart, IconStar } from "../../assets/icons";
 import "./sass/ProductoDetalle.scss";
 
 const ProductoDetalle = ({ history }) => {
@@ -70,11 +70,7 @@ const ProductoDetalle = ({ history }) => {
                 <div className="saleform-info__rate">
                   {rating?.rate > 0 &&
                     arrayRate.map((index) => (
-                      <img
-                        key={index}
-                        src="https://www.flaticon.com/svg/vstatic/svg/1828/1828884.svg?token=exp=1632520090~hmac=9d31ba4d1fe7c151cfe182b6a6a0d4fa"
-                        alt=""
-                      />
+                      <IconStar key={index}/>
                     ))}
                     <span> Calificación: {rating.count}</span>
                     

@@ -1,3 +1,5 @@
+@import '../../../styles/base/settings';
+
 .carrito-resumen {
     display         : flex;
     flex-flow       : column wrap;
@@ -7,7 +9,7 @@
     align-items     : center;
     height          : 100%;
 
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: $font-family-1;
 
     .sumaryCart {
         display        : flex;

@@ -46,9 +46,10 @@
                 //  height         : 14rem;
 
                 img {
-                    width     : 60%;
-                    box-sizing: border-box;
-                    transition: transform .2s;
+                    width        : 60%;
+                    box-sizing   : border-box;
+                    transition   : transform .2s;
+                    // object-fit: cover;
 
                     &:hover {
                         transform: scale(1.3);
@@ -84,7 +85,7 @@
 
                     span {
                         font-weight   : normal;
-                        font-family   : 'OpenSans';
+                        font-family   : $font-family-2;
                         font-size     : 1.4rem;
                         letter-spacing: 0
                     }

@@ -11,9 +11,9 @@ export const Sidebar = () => {
         </div>
         <div className="sidebar-content__actions">
           <span>Suscribirme</span>
-          
+
           <div className="sidebar-content__button">
-          <input type="text" placeholder='Ingrese su correo'/>
+            <input type="text" placeholder="Ingrese su correo" />
             <button>Enviar</button>
           </div>
         </div>
