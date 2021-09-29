@@ -9,7 +9,6 @@ import { parseMoney } from "../../utils/util";
 import img_payments from "../../assets/images/payments_list.webp";
 
 export const UserSession = () => {
-
   const { cartSumary, showHideCart, showCart } = useContext(CartContext);
 
   const [isHiddenCartSumary, setIsHiddenCartSumary] = useState(false);
@@ -19,7 +18,7 @@ export const UserSession = () => {
       document.body.style.overflow = "hidden";
       setIsHiddenCartSumary(true);
     } else {
-      document.body.style.overflowY  = "auto";
+      document.body.style.overflowY = "auto";
     }
   }, [showCart]);
 
@@ -48,9 +47,7 @@ export const UserSession = () => {
         <div
           className={`user_session--cover ${!showCart ? "" : "show"}`}
           onClick={() => showHideCart()}
-        >
-          cover
-        </div>
+        ></div>
 
         <div
           className={`user_session--cartsumary-data ${
@@ -59,10 +56,12 @@ export const UserSession = () => {
         >
           <div className="actions__header">
             <h4>Carrito</h4>
-            <span onClick={() => showHideCart()}>X</span>
+            <div onClick={() => showHideCart()}>
+              <span>X</span>
+            </div>
           </div>
           <div className="mini-carrito">
-            <CarritoItems/>
+            <CarritoItems />
           </div>
 
           <div className="user_session--goToCart">

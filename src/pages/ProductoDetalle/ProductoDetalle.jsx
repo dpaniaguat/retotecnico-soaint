@@ -6,11 +6,12 @@ import { useFetchProducts } from "../../hooks/useFetchProducts";
 import { agregarProducto } from "../../utils/appCart";
 import { IconCart, IconStar } from "../../assets/icons";
 import "./sass/ProductoDetalle.scss";
+import { ProductosRecomendados } from "../../components/widgets/ProductosRecomendados";
 
 const ProductoDetalle = ({ history }) => {
   const { productoId } = useParams();
 
-  const { addToCart } = useContext(CartContext);
+  const { addToCart,showHideCart } = useContext(CartContext);
 
   //const {  producto } = useMemo(() => useFetchProducts( productoId ), [ productoId ]);
   const { data: producto, loading } = useFetchProducts(productoId);
@@ -25,6 +26,7 @@ const ProductoDetalle = ({ history }) => {
     };
     const productoLS = agregarProducto(producto);
     addToCart(productoLS);
+    showHideCart();
   };
 
   //   if (producto.length === 0) {
@@ -69,11 +71,8 @@ const ProductoDetalle = ({ history }) => {
 
                 <div className="saleform-info__rate">
                   {rating?.rate > 0 &&
-                    arrayRate.map((index) => (
-                      <IconStar key={index}/>
-                    ))}
-                    <span> Calificación: {rating.count}</span>
-                    
+                    arrayRate.map((index) => <IconStar key={index} />)}
+                  <span> Calificación: {rating.count}</span>
                 </div>
 
                 <p className="saleform-info__description">{description}</p>
@@ -81,21 +80,21 @@ const ProductoDetalle = ({ history }) => {
                 <div className="saleform-info__price">
                   <span>S/{price}</span>
                 </div>
-                
-                <div className="saleform-info__qty">
-                </div>
+
+                <div className="saleform-info__qty"></div>
 
                 <button
                   className="saleform-info__addToCart"
                   onClick={() => handleAddToCart(id, title, price, image)}
                 >
-                  {<IconCart/>}
-                   Añadir al carrito
+                  {<IconCart />}
+                  Añadir al carrito
                 </button>
-               
               </div>
             </div>
           </div>
+          <hr />
+          <ProductosRecomendados />
         </>
       )}
     </>

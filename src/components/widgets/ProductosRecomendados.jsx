@@ -2,23 +2,22 @@ import React from "react";
 import { useFetchProducts } from "../../hooks/useFetchProducts";
 import Loading from "../common/Loading";
 import { ProductoItem } from "./ProductoItem";
-import "./sass/Productos.scss";
+import "./sass/ProductosRecomendados.scss";
 
-export const Productos = ({ viewHeaderCounter = false }) => {
+export const ProductosRecomendados = () => {
   const { data: products, loading } = useFetchProducts(0);
 
   return (
-    <section className="widget-productos">
-
-      {viewHeaderCounter && <div className="header-count"><h2>
-        Mostrando {products.length} Productos
-        </h2></div>}
-
+    <section className="widget-productos-recomendados">
+      <h3>Productos recomendados</h3>
       <div className="productos">
         {loading && <Loading texto="Cargando productos..." />}
-        {products.map((data) => (
-          <ProductoItem key={data.id} {...data} />
-        ))}
+        {products
+          .sort(() => Math.random() - Math.random())
+          .slice(0, 5)
+          .map((data) => (
+            <ProductoItem key={data.id} {...data} />
+          ))}
       </div>
     </section>
   );

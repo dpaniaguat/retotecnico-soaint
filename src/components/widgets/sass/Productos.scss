@@ -5,10 +5,29 @@
     flex-flow      : column wrap;
     justify-content: center;
     align-items    : center;
-    margin-bottom  : 10rem;
+    margin-bottom  : 5rem;
 
     h2 {
         margin-top: 2rem;
+    }
+
+    .header-count{
+        margin-top: 1rem;
+        width: 94%;
+        background-color: white;
+        height: 3rem;
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+        align-items: center;  
+        padding: 1rem;
+        &>h2{
+            margin-top: 0;
+            font-size: 1.2rem;
+            font-weight: normal;
+            color: $primary ;
+            letter-spacing: 1px;
+        }
     }
 
     .productos {

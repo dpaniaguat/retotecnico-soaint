@@ -74,10 +74,21 @@
         flex-flow      : row wrap;
         justify-content: space-between;
         align-items    : center;
-        padding        : 2rem;
+        padding        : 1.5rem;
 
         &>span {
             font-size: 1.5rem;
+            
+        }
+        &>div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 1px dashed #ccc;
+            background: white;
+            height: 40px;
+            width: 40px; 
             cursor   : pointer;
         }
     }

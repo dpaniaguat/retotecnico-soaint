@@ -39,7 +39,7 @@ export const ProductoItem = ({ id, title, price, image }) => {
               : title}
           </h4>
           <p className="producto-info__precios">
-            <span>S/{parseMoney( price)}</span>
+            <span>S/{parseMoney(price)}</span>
           </p>
         </div>
       </Link>
