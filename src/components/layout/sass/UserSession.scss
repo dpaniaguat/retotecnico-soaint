@@ -67,6 +67,9 @@
 
     .mini-carrito{
         padding-right: 1rem;
+        min-height: 40rem;
+        max-height: 40rem;
+        overflow-y: scroll;
     }
 
     .actions__header {

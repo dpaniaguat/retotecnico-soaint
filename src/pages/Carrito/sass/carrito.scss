@@ -25,7 +25,7 @@
     padding         : 1rem;
     background-color: white;
     border-radius   : 1rem;
-
+    overflow-x: hidden;
     .carro_item {
         display                 : grid;
         // grid-template-columns: 7rem 15rem 5rem 5rem 5rem;
@@ -67,12 +67,19 @@
 
         //eliminar ultimo elemento ejemplo border
         /*
+        
         .item-opcion:last-of-type{
             border:none;
         }
         */
 
+        &:last-of-type {
+            border: none;
+        }
+
     }
+
+    
 }
 
 @media(min-width:600px) {
@@ -87,6 +94,9 @@
     .carritoCompras .carro_item {
         display: flex;
         gap    : 1rem;
+        &:last-of-type {
+            border: none;
+        }
     }
 }
 

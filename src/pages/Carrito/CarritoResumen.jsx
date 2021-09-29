@@ -8,7 +8,7 @@ const CarritoResumen = () => {
   let history = useHistory();
 
   const handleGotoCheckout = () => {
-    showHideCart();
+    
     history.push("/checkout");
   };
 
