@@ -6,7 +6,6 @@ import Widget from "../../components/widgets/Widget";
 import { widgetData } from "../../utils/widgetsData";
 
 const Home = () => {
-  console.log(widgetData);
 
   return (
     <>

@@ -1,9 +1,16 @@
 import React, { useContext } from "react";
 import CartContext from "../../context/cart/CartContext";
+import { useHistory } from "react-router-dom";
 import "./sass/carritoResumen.scss";
 
 const CarritoResumen = () => {
   const { cartSumary, showHideCart, showCart } = useContext(CartContext);
+  let history = useHistory();
+
+  const handleGotoCheckout = () => {
+    
+    history.push("/checkout");
+  };
 
   return (
     <div className="carrito-resumen">
@@ -29,9 +36,7 @@ const CarritoResumen = () => {
           </div>
         </div>
         <div className="sumary__button">
-            <button>
-                IR A PAGAR
-            </button>
+          <button onClick={handleGotoCheckout}>IR A PAGAR</button>
         </div>
       </div>
     </div>

@@ -21,11 +21,11 @@
 
 .carritoCompras {
     //  width  : 70vw;
-    width: 100%;
+    width           : 100%;
     padding         : 1rem;
     background-color: white;
-    border-radius: 1rem;
-
+    border-radius   : 1rem;
+    overflow-x: hidden;
     .carro_item {
         display                 : grid;
         // grid-template-columns: 7rem 15rem 5rem 5rem 5rem;
@@ -44,7 +44,7 @@
             background     : white;
             border         : 1px solid rgb(238, 237, 237);
             margin-bottom  : 5px;
-            margin-right   : 10px;
+            //margin-right   : 10px;
             display        : flex;
             justify-content: center;
 
@@ -54,7 +54,7 @@
         }
 
         span {
-            width: 20rem;
+            //width: 20rem;
         }
 
         .item-opcion {
@@ -65,7 +65,21 @@
             }
         }
 
+        //eliminar ultimo elemento ejemplo border
+        /*
+        
+        .item-opcion:last-of-type{
+            border:none;
+        }
+        */
+
+        &:last-of-type {
+            border: none;
+        }
+
     }
+
+    
 }
 
 @media(min-width:600px) {
@@ -78,8 +92,11 @@
     }
 
     .carritoCompras .carro_item {
-        display        : flex;
-        gap            : 1rem;
+        display: flex;
+        gap    : 1rem;
+        &:last-of-type {
+            border: none;
+        }
     }
 }
 
@@ -94,16 +111,31 @@
     }
 
     .carritoCompras .carro_item {
-        display: grid;
-        grid-template-columns: 7rem 20rem 4rem 4rem 4rem;
+        display                : grid;
+        display                : flex;
+        flex-flow              : row wrap;
+        //grid-template-columns: repeat(auto-fill, minmax(min(100%, 10rem), 1fr));
+    }
+
+    .carritoCompras .carro_item:last-of-type {
+        border: none;
+    }
+
+    .carritoCompras .carro_item--row {
+        //max-width            : 90%;
+        flex                 : 70%;
+        display              : grid;
+        grid-template-columns: 20rem repeat(auto-fill, minmax(min(100%, 8rem), 1fr));
     }
 
 
     .carritoCompras .carro_item--imagenCover {
-        display: block;
+        //flex: 10%;
+        width : 3.5rem;
+        height: 3.5rem;
 
         img {
-            width: 4.3rem;
+            width: 100%;
         }
     }
 }

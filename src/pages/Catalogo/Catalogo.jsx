@@ -4,7 +4,7 @@ import { Productos } from '../../components/widgets/Productos'
 const Catalogo = () => {
     return (
         <div className="catalogo">
-            <Productos/>
+            <Productos viewHeaderCounter={true}/>
         </div>
     )
 }
