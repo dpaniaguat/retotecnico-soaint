@@ -28,7 +28,7 @@ export const ProductoItem = ({ id, title, price, image }) => {
 
   return (
     <div className="producto" key={id}>
-      <Link exact to={`/producto/${id}`}>
+      <Link to={`/producto/${id}`}>
         <div className="producto-imagen">
           <img src={image} alt={title} />
         </div>

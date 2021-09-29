@@ -4,7 +4,7 @@ const parseMoney = (numberValue, numDecimals = 2) => {
 const Validator = (method, data) => {
   const regexAction = {
     special: /[\W]/g,
-    quotes: /['\''&'\"']/g,
+    quotes: /['''&'"']/g,
     notnumbers: /[^\d]/g,
     notletters: /[A-Za-z]/g,
     numbercomma: /[^\d,]/g,

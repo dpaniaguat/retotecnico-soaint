@@ -5,7 +5,7 @@ import "./sass/Header.scss";
 export const Header = () => {
   return (
     <header className="header">
-      <Link exact to="/">
+      <Link to="/">
         <figure className="header__logo">
           <img
             src={process.env.REACT_APP_LOGO_APP}

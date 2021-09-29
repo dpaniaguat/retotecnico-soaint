@@ -11,7 +11,7 @@ export const Navbar = () => {
           ({ href, menu, privado }, i) =>
             !privado && (
               <li key={i}>
-                <Link exact to={href}>
+                <Link to={href}>
                   {menu}
                 </Link>
                 <span></span>

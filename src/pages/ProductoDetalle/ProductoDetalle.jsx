@@ -79,9 +79,7 @@ const ProductoDetalle = ({ history }) => {
   return (
     <>
       {(loading && (
-        <p className="animate__animated animate__flash">
-          <Loading />
-        </p>
+        <Loading />
       )) || (
         <>
           <div className="breadcrumb">

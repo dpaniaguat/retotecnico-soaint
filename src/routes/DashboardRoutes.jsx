@@ -6,16 +6,15 @@ import { RouteData } from "./RouteData";
 
 export const DashboardRoutes = (roles, privado = false) => {
   return (
-    <>
-      <Layout>
+    <Layout>
         <Switch>
-          <Route key={0} exact={true} path="/" component={Home} />
+          <Route key={0} exact path="/" component={Home} />
           {RouteData.map(
-            ({ component, path, rolId, exact }) =>
+            ({ component, path, rolId, exact=false }) =>
               (!privado && (
                 <Route
                   key={rolId}
-                  exact={exact}
+                  
                   path={path}
                   component={component}
                 />
@@ -24,21 +23,20 @@ export const DashboardRoutes = (roles, privado = false) => {
           )}
           {privado &&
             RouteData.map(
-              ({ component, path, rolId, exact }) =>
+              ({ component, path, rolId, exact=false }) =>
                 (privado && (
                   <Route
                     key={rolId}
-                    exact={exact}
+                    
                     path={path}
                     component={component}
                   />
                 )) ||
                 null
             )}
-          <Route exact={true} path="/" component={Home} />
+          {/* <Route exact path="/" component={Home} /> */}
           <Redirect to="/" />
         </Switch>
       </Layout>
-    </>
   );
 };
