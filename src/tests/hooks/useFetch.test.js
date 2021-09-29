@@ -32,7 +32,7 @@ describe('Pruebas en useFetch', () => {
 
     test('debe de manejar el error', async() => {
         
-        const { result, waitForNextUpdate } = renderHook( () => useFetch(`${process.env.REACT_APP_API_URL}/12`) );
+        const { result, waitForNextUpdate } = renderHook( () => useFetch(`${process.env.REACT_APP_API_URL}/xyz`) );
         await waitForNextUpdate();
 
         const { data, loading, error } = result.current;
