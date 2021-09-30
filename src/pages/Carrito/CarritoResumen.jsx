@@ -4,7 +4,8 @@ import { useHistory } from "react-router-dom";
 import "./sass/carritoResumen.scss";
 
 const CarritoResumen = () => {
-  const { cartSumary, showHideCart, showCart } = useContext(CartContext);
+  const { cartSumary } = useContext(CartContext);
+  
   let history = useHistory();
 
   const handleGotoCheckout = () => {

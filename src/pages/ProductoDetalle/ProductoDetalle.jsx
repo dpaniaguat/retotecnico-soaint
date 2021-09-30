@@ -1,5 +1,5 @@
-import React, { useMemo, useContext,useEffect } from "react";
-import { useParams, Redirect } from "react-router-dom";
+import React, { /*useMemo, */useContext,/*useEffect*/ } from "react";
+import { useParams/*, Redirect*/ } from "react-router-dom";
 import Loading from "../../components/common/Loading";
 import CartContext from "../../context/cart/CartContext";
 // import { useFetchProducts } from "../../hooks/useFetchProducts";
@@ -36,6 +36,7 @@ const ProductoDetalle = ({ history }) => {
   //   return <Redirect to="/" />;
   // }
 
+  /*
   const handleReturn = () => {
     if (history.length <= 2) {
       history.push("/");
@@ -43,7 +44,7 @@ const ProductoDetalle = ({ history }) => {
       history.goBack();
     }
   };
-
+*/
   const {
     category = "",
     description = "",
@@ -78,9 +79,7 @@ const ProductoDetalle = ({ history }) => {
   return (
     <>
       {(loading && (
-        <p className="animate__animated animate__flash">
-          <Loading />
-        </p>
+        <Loading />
       )) || (
         <>
           <div className="breadcrumb">

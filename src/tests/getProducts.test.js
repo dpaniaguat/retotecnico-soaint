@@ -5,7 +5,7 @@ import { Productos } from '../components/widgets/Productos'
 
 configure({ adapter: new Adapter() });
 
-test('message box', () => {
+test('test lista productos component <Productos/>', () => {
     const wrapper = shallow(<Productos viewHeaderCounter={true} />);
     expect(wrapper).toMatchSnapshot();
 })

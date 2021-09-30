@@ -1,7 +1,7 @@
 import React from "react";
-import { Banner } from "../../components/widgets/Banner";
-import { Confianza } from "../../components/widgets/Confianza";
-import { Productos } from "../../components/widgets/Productos";
+//import { Banner } from "../../components/widgets/Banner";
+//import { Confianza } from "../../components/widgets/Confianza";
+//import { Productos } from "../../components/widgets/Productos";
 import Widget from "../../components/widgets/Widget";
 import { widgetData } from "../../utils/widgetsData";
 
