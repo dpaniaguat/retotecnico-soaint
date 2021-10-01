@@ -1,5 +1,5 @@
-import React, {useState, /*useMemo, */useContext,/*useEffect*/ } from "react";
-import { useParams/*, Redirect*/ } from "react-router-dom";
+import React, { useState, /*useMemo, */ useContext /*useEffect*/ } from "react";
+import { useParams /*, Redirect*/ } from "react-router-dom";
 import Loading from "../../components/common/Loading";
 import CartContext from "../../context/cart/CartContext";
 // import { useFetchProducts } from "../../hooks/useFetchProducts";
@@ -56,7 +56,7 @@ const ProductoDetalle = ({ history }) => {
     rating = [],
     title = "",
     id = 0,
-  } = !!data && data ;
+  } = !!data && data;
 
   let arrayRate = [];
 
@@ -81,9 +81,7 @@ const ProductoDetalle = ({ history }) => {
 */
   return (
     <>
-      {(loading && (
-        <Loading />
-      )) || (
+      {(loading && <Loading />) || (
         <>
           <div className="breadcrumb">
             <p>Inicio</p>
@@ -111,8 +109,12 @@ const ProductoDetalle = ({ history }) => {
                 </div>
 
                 <div className="saleform-info__qty">
-                <CounterCart cantidadInicial={1} setClick={setIsClick} isclick={isClick} currentCounter={setCurrentCount}/>
-            
+                  <CounterCart
+                    cantidadInicial={1}
+                    setClick={setIsClick}
+                    isclick={isClick}
+                    currentCounter={setCurrentCount}
+                  />
                 </div>
 
                 <button

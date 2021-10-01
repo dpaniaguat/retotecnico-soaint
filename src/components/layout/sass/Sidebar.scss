@@ -43,12 +43,14 @@
         }
 
         input {
-            width        : 100vw;
-            height       : 3rem;
-            border-style : none;
-            border-bottom: 1px solid #ffff;
-            border-radius: 3px;
-            padding: 1rem;
+            width                    : 100vw;
+            height                   : 3rem;
+            border-style             : none;
+            border-bottom            : 1px solid #ffff;
+            border-radius            : 3px;
+            padding                  : 1rem;
+            border-top-left-radius   : 10px;
+            border-bottom-left-radius: 10px;
         }
 
         input::placeholder {
@@ -110,12 +112,14 @@
         }
 
         .sidebar-content__actions input {
-            width        : 23rem;
-            height       : 3rem;
-            border-style : none;
-            border-bottom: 1px solid #ffff;
-            border-radius: 3px;
-            padding: 1rem;
+            width                    : 23rem;
+            height                   : 3rem;
+            border-style             : none;
+            border-bottom            : 1px solid #ffff;
+            border-radius            : 3px;
+            padding                  : 1rem;
+            border-top-left-radius   : 10px;
+            border-bottom-left-radius: 10px;
         }
 
         .sidebar-content__button button {
@@ -168,14 +172,17 @@
         }
 
         .sidebar-content__actions input {
-            width        : 23rem;
-            height       : 3rem;
-            border-style : none;
-            border-bottom: 1px solid #ffff;
-            border-radius: 3px;
-            padding      : 1rem;
+            width                    : 23rem;
+            height                   : 3rem;
+            border-style             : none;
+            border-bottom            : 1px solid #ffff;
+            border-radius            : 3px;
+            padding                  : 1rem;
+            border-top-left-radius   : 10px;
+            border-bottom-left-radius: 10px;
+
             &:focus {
-                height: 2.9rem;
+                height: 2.8rem;
             }
         }
 

@@ -19,8 +19,7 @@
 
         &__item {
             height         : 15rem;
-            width          : 15rem;
-            border-radius  : 10px;
+            width          : 100%;
             display        : flex;
             flex-flow      : column wrap;
             justify-content: center;
@@ -28,6 +27,11 @@
             color          : white;
             font-size      : 20px;
             text-align     : center;
+            border-right   : 1px dashed #b5b5b5;
+
+            &:last-of-type {
+                border: none;
+            }
 
             img {
                 height: 5.2rem;
