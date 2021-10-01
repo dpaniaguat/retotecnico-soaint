@@ -5,7 +5,7 @@ const Loading = ({ texto = 'Cargando...' }) => (
 
   <div className="loading">
     <div className="circle"></div>
-    <p className="RF_Paragraph_4">{texto}</p>
+    <p className="loading-title">{texto}</p>
   </div>
 )
 

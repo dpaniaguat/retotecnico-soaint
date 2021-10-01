@@ -33,7 +33,7 @@ $height-footer--devices : 100%;
 
 .sidebar {
     grid-area       : sidebar;
-    background-color: rebeccapurple;
+    background-color: $primary;
     display: flex;
     align-items: center;
     justify-content: center;

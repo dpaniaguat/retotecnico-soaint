@@ -17,8 +17,8 @@ const agregarProducto = ({ imagen, titulo, precio, id, cantidad }) => {
   if (articulosCarrito.some((Producto) => Producto.id === infoProducto.id)) {
     const Productos = articulosCarrito.map((Producto) => {
       if (Producto.id === infoProducto.id) {
-        let cantidad = parseInt(Producto.cantidad);
-        cantidad++;
+        //let cantidad = parseInt(Producto.cantidad);
+        //cantidad++;
         Producto.cantidad = cantidad;
         return Producto;
       } else {

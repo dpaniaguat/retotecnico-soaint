@@ -1,0 +1,57 @@
+.counter-content {
+    // background-color: red;
+    // width : 8rem;
+    height: 2rem;
+
+    display        : flex;
+    flex-flow      : row wrap;
+    justify-content: flex-start;
+    align-items    : center;
+    cursor         : pointer;
+
+    &__button {
+        width           : 2rem;
+        height          : 1.5rem;
+        background-color: black;
+        border          : 1px solid #ccc;
+        border-style    : none;
+        border-left     : 1px solid #ccc;
+        color           : white;
+
+        &:hover {
+            text-shadow: 0px 0px 2px;
+        }
+    }
+
+    .incrementa {
+        border-bottom-left-radius: 5px;
+        border-top-left-radius   : 5px;
+    }
+
+    .decrementa {
+        border-bottom-right-radius: 5px;
+        border-top-right-radius   : 5px;
+    }
+
+    &__input {
+        width        : 2.5rem;
+        height       : 1.5rem;
+        border-style : none;
+        padding      : 1px;
+        border-top   : 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        text-align   : center;
+
+        &:focus {
+            border-color: red;
+            outline     : none !important;
+            border-color: #719ECE;
+            box-shadow  : 0 0 10px #719ECE;
+        }
+    }
+
+    .disabled{
+        background-color: #ccc
+    }
+
+}

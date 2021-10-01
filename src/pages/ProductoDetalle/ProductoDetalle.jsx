@@ -1,4 +1,4 @@
-import React, { /*useMemo, */useContext,/*useEffect*/ } from "react";
+import React, {useState, /*useMemo, */useContext,/*useEffect*/ } from "react";
 import { useParams/*, Redirect*/ } from "react-router-dom";
 import Loading from "../../components/common/Loading";
 import CartContext from "../../context/cart/CartContext";
@@ -8,11 +8,14 @@ import { IconCart, IconStar } from "../../assets/icons";
 import "./sass/ProductoDetalle.scss";
 import { ProductosRecomendados } from "../../components/widgets/ProductosRecomendados";
 import { useFetch } from "../../hooks/useFetch";
+import { CounterCart } from "../../components/common/CounterCart";
 
 const ProductoDetalle = ({ history }) => {
   const { productoId } = useParams();
 
   const { addToCart, showHideCart } = useContext(CartContext);
+  const [isClick, setIsClick] = useState(false);
+  const [currentCount, setCurrentCount] = useState(1);
 
   //const {  producto } = useMemo(() => useFetchProducts( productoId ), [ productoId ]);
   const { loading, data } = useFetch(
@@ -25,7 +28,7 @@ const ProductoDetalle = ({ history }) => {
       titulo: title,
       precio: price,
       imagen: image,
-      cantidad: 1,
+      cantidad: currentCount,
     };
     const productoLS = agregarProducto(producto);
     addToCart(productoLS);
@@ -107,7 +110,10 @@ const ProductoDetalle = ({ history }) => {
                   <span>S/{price}</span>
                 </div>
 
-                <div className="saleform-info__qty"></div>
+                <div className="saleform-info__qty">
+                <CounterCart cantidadInicial={1} setClick={setIsClick} isclick={isClick} currentCounter={setCurrentCount}/>
+            
+                </div>
 
                 <button
                   className="saleform-info__addToCart"

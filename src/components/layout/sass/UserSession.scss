@@ -201,7 +201,7 @@
     */
     &--goToCart {
         width           : 100%;
-        height          : 15rem;
+        height          : 12rem;
         background-color: white;
         border-top      : 1px solid rgb(245, 243, 243);
         position        : fixed;
@@ -223,7 +223,7 @@
         }
 
         &__button {
-            margin-top      : 2rem;
+            // margin-top      : 2rem;
             width           : 100%;
             height          : 3rem;
             background-color: black;
@@ -233,14 +233,14 @@
         }
 
         &__payments {
-            margin-top     : 1rem;
+            margin-top     : 1.5rem;
             display        : flex;
             justify-content: center;
             align-items    : center;
 
             img {
                 width  : 60%;
-                padding: 2rem;
+                // padding: 2rem;
             }
         }
     }

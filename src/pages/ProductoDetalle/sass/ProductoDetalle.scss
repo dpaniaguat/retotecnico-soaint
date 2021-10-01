@@ -54,7 +54,7 @@
             margin-bottom: 2rem;
             font-size    : 2rem;
             border-bottom: 1px solid #ccc;
-            font-weight: 900;
+            font-weight  : 900;
         }
 
         &__description {
@@ -76,6 +76,12 @@
                 color    : rgba(3, 24, 41, 0.912);
                 font-size: 1.6rem;
             }
+        }
+
+        &__qty {
+            margin-top     : 2rem;
+            display        : flex;
+            justify-content: flex-start;
         }
 
         &__rate {

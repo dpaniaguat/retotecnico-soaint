@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import CartContext from "../../context/cart/CartContext";
 import { useHistory } from "react-router-dom";
 import "./sass/carritoResumen.scss";
+import { parseMoney } from "../../utils/util";
 
 const CarritoResumen = () => {
   const { cartSumary } = useContext(CartContext);
@@ -25,7 +26,7 @@ const CarritoResumen = () => {
         <div className="sumary_elements">
           <div className="sumary__element">
             <span>Subtotal</span>
-            <strong>S/{cartSumary.subTotal}</strong>
+            <strong>S/{parseMoney(parseFloat(cartSumary.subTotal))}</strong>
           </div>
           <div className="sumary__element">
             <span>Descuento</span>
@@ -33,7 +34,7 @@ const CarritoResumen = () => {
           </div>
           <div className="sumary__element">
             <span>Total</span>
-            <strong>S/{cartSumary.subTotal}</strong>
+            <strong>S/{parseMoney(parseFloat(cartSumary.subTotal))}</strong>
           </div>
         </div>
         <div className="sumary__button">

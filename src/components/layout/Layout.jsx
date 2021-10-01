@@ -1,4 +1,5 @@
 import React from "react";
+import { Modal } from "../common/Modal";
 import Container from "./Container";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
@@ -13,6 +14,7 @@ const Layout = ({ children }) => {
 
   return (
     <div className="app_wrapper">
+      <Modal></Modal>
       <HeaderCinta />
       <Header />
       <UserSession />

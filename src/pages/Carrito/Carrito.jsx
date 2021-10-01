@@ -5,18 +5,16 @@ import CarritoResumen from "./CarritoResumen";
 import "./sass/carrito.scss";
 
 const Carrito = () => {
-  
   return (
     <div className="carrito">
       <div className="breadcrumb">
-          <p>Inicio</p>
-          <i>/</i>
-          <span>Carro de compras</span>
-        </div>
+        <p>Inicio</p>
+        <i>/</i>
+        <span>Carro de compras</span>
+      </div>
       <section className="carrito-content">
-        
         <CarritoItems />
-        <CarritoResumen/>
+        <CarritoResumen />
       </section>
     </div>
   );
